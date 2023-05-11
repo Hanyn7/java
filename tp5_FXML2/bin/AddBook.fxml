@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="504.0" prefWidth="414.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddBookController">
+   <children>
+      <Text layoutX="21.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prénom" />
+      <Text layoutX="21.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" />
+      <Text layoutX="21.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse Email" />
+      
+      <TextField fx:id="tfFirstName" layoutX="238.0" layoutY="29.0" prefHeight="26.0" prefWidth="171.0" style="-fx-background-radius: 15;" />
+      <TextField fx:id="tfLastName" layoutX="238.0" layoutY="65.0" prefHeight="26.0" prefWidth="171.0" style="-fx-background-radius: 15;" />
+      <TextField fx:id="tfEmail" layoutX="238.0" layoutY="101.0" prefHeight="26.0" prefWidth="171.0" style="-fx-background-radius: 15;" />
+      <Button fx:id="addbtn" layoutX="131.0" layoutY="154.0" mnemonicParsing="false" onAction="#add" text="Ajouter à la table" />
+      <TableView fx:id="table" layoutY="209.0" prefHeight="182.0" prefWidth="414.0">
+        <columns>
+          <TableColumn fx:id="firstNameCol" prefWidth="131.20000916719437" text="Prénom" />
+          <TableColumn fx:id="lastNameCol" prefWidth="112.0" text="Nom" />
+            <TableColumn fx:id="emailCol" prefWidth="167.20008850097656" text="Adresse Email" />
+        </columns>
+      </TableView>
+      <Button fx:id="Removebtn" alignment="CENTER" layoutX="47.0" layoutY="412.0" mnemonicParsing="false" onAction="#remove" text="Supprimer" textAlignment="CENTER" />
+      <Button fx:id="Importbtn" alignment="CENTER" layoutX="144.0" layoutY="412.0" mnemonicParsing="false" onAction="#importe" text="Importer" textAlignment="CENTER" />
+      <Button fx:id="Exportbtn" alignment="CENTER" layoutX="231.0" layoutY="412.0" mnemonicParsing="false" onAction="#export" text="Exporter" textAlignment="CENTER" />
+      <Button fx:id="Quitbtn" alignment="CENTER" layoutX="314.0" layoutY="412.0" mnemonicParsing="false" onAction="#quit" text="Quitter" textAlignment="CENTER" />
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets top="20.0" />
+   </padding>
+</AnchorPane>
